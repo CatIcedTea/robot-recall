@@ -24,12 +24,11 @@ public class Gun : MonoBehaviour
         }
         else{
             if(Input.GetMouseButtonDown(0)){
-                if(CurrentFirerate <= 0f){
-                    OnGunShoot?.Invoke();
-                    CurrentFirerate = FireRate;
-                }
+                OnGunShoot?.Invoke();
             }
         }
-        CurrentFirerate -= Time.deltaTime;
+        if(CurrentFirerate > 0){
+            CurrentFirerate -= Time.deltaTime;
+        }
     }
 }
