@@ -78,3 +78,4 @@ crashlytics-build.properties
 *.cs
 *.cs
 *.editorconfig
+.vscode/settings.json
