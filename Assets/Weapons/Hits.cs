@@ -23,8 +23,8 @@ public class Hits : MonoBehaviour
         Ray gunRay = new Ray(GunLocation.position,GunLocation.forward);
         ShootingSound.Play();
         if(Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange)){
-            if(hitInfo.collider.gameObject.TryGetComponent(out Entity enemy)){
-                enemy.Health -= Damage;
+            if(hitInfo.collider.gameObject.TryGetComponent(out Health enemy)){
+                enemy.Damage((int) Damage);
             }
         }
     }

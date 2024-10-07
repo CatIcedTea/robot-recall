@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 399382075}
   - component: {fileID: 399382074}
   - component: {fileID: 399382073}
+  - component: {fileID: 399382078}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -673,7 +674,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399382072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11c2bf0870f7c14c9c8fcb8143830e7, type: 3}
   m_Name: 
@@ -767,6 +768,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &399382078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399382072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47425f16883f66648b0bd9ce447191cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 3
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 399382072}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &420154754
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +997,7 @@ GameObject:
   - component: {fileID: 459657128}
   - component: {fileID: 459657127}
   - component: {fileID: 459657126}
+  - component: {fileID: 459657131}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -976,7 +1012,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459657125}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b11c2bf0870f7c14c9c8fcb8143830e7, type: 3}
   m_Name: 
@@ -1070,6 +1106,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459657131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459657125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47425f16883f66648b0bd9ce447191cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 6
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 459657125}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &535752869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1669,7 @@ GameObject:
   - component: {fileID: 681142528}
   - component: {fileID: 681142527}
   - component: {fileID: 681142526}
+  - component: {fileID: 681142531}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -1707,6 +1778,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681142531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681142525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47425f16883f66648b0bd9ce447191cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 9
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 681142525}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1928,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5049066395088397964, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
   m_PrefabInstance: {fileID: 3236427856911865699}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &765978462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765978449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47425f16883f66648b0bd9ce447191cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 100
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &884951019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,7 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf257ddc0bf1ce478a28250541372b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 765978454}
+  _health: {fileID: 765978462}
   _barRect: {fileID: 1620728467}
   _mask: {fileID: 657118248}
   _hpIndicator: {fileID: 934996350}
@@ -3249,6 +3376,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1163347115641413735, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 765978454}
+    - targetCorrespondingSourceObject: {fileID: 1163347115641413735, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 765978462}
   m_SourcePrefab: {fileID: 100100000, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
