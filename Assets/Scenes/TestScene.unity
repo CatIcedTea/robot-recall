@@ -3127,6 +3127,30 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: dec9a26bdaa21dc458ee3d59be0b87d3, type: 2}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1895278988}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HealthBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359673938343776622, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
