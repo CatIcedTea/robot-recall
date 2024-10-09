@@ -8,6 +8,8 @@ public class Health : MonoBehaviour
     [SerializeField]
     private int _maxHp = 100;
     private int _hp;
+    private bool deadStatus = false;
+    public bool enemyStatus = true;
 
     public int MaxHp => _maxHp;
     public int Hp
@@ -27,6 +29,11 @@ public class Health : MonoBehaviour
             }
             if(_hp <= 0)
             {
+                if(enemyStatus == true && deadStatus == false)
+                {
+                    deadStatus = true;
+                    ScoreScript.scoreValue += 10;
+                }
                 Died?.Invoke(0);
             }
         }
