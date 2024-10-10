@@ -31,18 +31,18 @@ public class PauseMenu : MonoBehaviour
                 QuitGame();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.M))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
+        //else if (Input.GetKeyDown(KeyCode.M))
+        //{
+            //if (GameIsPaused)
+            //{
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            //}
+            //else
+            //{
 
-                Pause();
-            }
-        }
+                //Pause();
+            //}
+        //}
     }
 
     public void Resume()

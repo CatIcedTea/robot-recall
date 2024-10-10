@@ -78,3 +78,4 @@ crashlytics-build.properties
 *.editorconfig
 .vscode/settings.json
 /Library/StateCache
+Assets/TextMesh Pro/Fonts/RobotInvaders-d9VmR.ttf
