@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "RobotRecall.sln"
+    "dotnet.defaultSolution": "robot-recall.sln"
 }
