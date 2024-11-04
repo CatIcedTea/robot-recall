@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Player\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGun\EnemyGun.cs" />
     <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
+    <Compile Include="Assets\MobilityArts\SciFiHandGun\Scripts\OrbitAroundTarget.cs" />
     <Compile Include="Assets\Scripts\Player\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\Player\Speedometer.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyNavAI.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Weapons\Hits.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGun\EnemyBulletProjectile.cs" />
     <Compile Include="Assets\Scripts\Player\Health.cs" />
+    <Compile Include="Assets\Scifi-Gun\ReadMe.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGun\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

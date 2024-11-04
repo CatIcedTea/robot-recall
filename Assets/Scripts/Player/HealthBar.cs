@@ -31,7 +31,7 @@ public class HealthBar : MonoBehaviour
         var targetWidth = newValue * _maxRightMask / _health.MaxHp;
         var newRightMask = _maxRightMask + _initialRightMask - targetWidth;
         var padding = _mask.padding;
-        padding.z = newRightMask;
+        padding.z = newRightMask * 7;
         _mask.padding = padding;
         _hpIndicator.SetText($"{newValue}/{_health.MaxHp}");
     }
