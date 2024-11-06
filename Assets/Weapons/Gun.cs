@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public int gunType;
     public UnityEvent OnGunShoot;
     public float FireRate;
     //Default is semi automatic
