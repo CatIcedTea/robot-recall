@@ -4,6 +4,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
+    [SerializeField] private float _dashCooldown;
+    [SerializeField] private float _maxStamina;
+    [SerializeField] private float _staminaRegenSpeed;
+    [SerializeField] private float _staminaRegenTimer;
+    [SerializeField] private float _dashStaminaCost;
     [SerializeField] private float _acceleration;
     [SerializeField] private float _maxSpeed;
     [SerializeField] private float _maxAirSpeed;
@@ -25,7 +30,16 @@ public class PlayerMovement : MonoBehaviour
     private bool _isOnFloor;
     //Used to check if player is crouching
     private bool _isCrouching;
+    //Used to check if player is dashing
     private bool _isDashing;
+    //Current dash cooldown timer
+    private float _currentDashCooldown;
+    //Current stamina stamina regen timer
+    private float _currentStaminaRegenTimer;
+    //Current stamina
+    private float _stamina;
+    //Used to check if the player can regen stamina
+    private bool _canRegenStamina = true;
     //Vector of the player's input
     private Vector3 _inputDir;
     //Rigid body component of the player
@@ -41,6 +55,9 @@ public class PlayerMovement : MonoBehaviour
 
         //Freeze the rotation of the player
         _rigidBody.freezeRotation = true;
+        
+        _currentDashCooldown = 0;
+        _stamina = _maxStamina;
     }
 
     // Update is called once per frame
@@ -48,10 +65,22 @@ public class PlayerMovement : MonoBehaviour
     {
         //Check if it is on floor
         _isOnFloor = Physics.SphereCast(transform.position, 0.25f, Vector3.down, out RaycastHit hit, _playerHeight * transform.localScale.y * 0.5f - 0.25f + 0.02f);
+
+        if(_currentDashCooldown > 0)
+            _currentDashCooldown -= Time.deltaTime;
+
+        if(_currentStaminaRegenTimer > 0)
+            _currentStaminaRegenTimer -= Time.deltaTime;
+
+        if(_stamina < _maxStamina && _currentStaminaRegenTimer <= 0){
+            _stamina += _staminaRegenSpeed * Time.deltaTime;
+            if(_stamina > _maxStamina)
+                _stamina = _maxStamina;
+        }
         
         if(_isOnFloor){
             if(_inputDir == Vector3.zero){
-                if(_rigidBody.velocity.magnitude < 0.1){
+                if(_rigidBody.velocity.magnitude < 1){
                     _rigidBody.velocity = Vector3.zero;
                 }
             }
@@ -106,7 +135,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Handle dashing in Input Handler
     public void HandleDash(){
-       StartCoroutine(DashCoroutine());
+        StartCoroutine(DashCoroutine());
+        _currentDashCooldown = _dashCooldown;
     }
 
     //Handle the velocity of the player and able to bunnyhop
@@ -137,7 +167,9 @@ public class PlayerMovement : MonoBehaviour
 
     //Coroutine for dashing
     private IEnumerator DashCoroutine(){
+        _stamina -= 25;
         _isDashing = true;
+        _currentStaminaRegenTimer = _staminaRegenTimer;
         _rigidBody.useGravity = false;
         _rigidBody.drag = 0;
         if(_inputDir != Vector3.zero)
@@ -148,5 +180,17 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         _isDashing = false;
         _rigidBody.useGravity = true;
+    }
+
+    public float GetStamina(){
+        return _stamina;
+    }
+
+    public float GetMaxStamina(){
+        return _maxStamina;
+    }
+
+    public bool CanDash(){
+        return _currentDashCooldown <= 0 && _stamina >= _dashStaminaCost;
     }
 }
