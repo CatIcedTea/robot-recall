@@ -91,7 +91,7 @@ public class MerchantScript : MonoBehaviour
             {
                 ScoreScript.scoreValue -= 10;
             }
-            if (Input.GetKeyDown(KeyCode.E) && ScoreScript.scoreValue >= 10)
+            if (Input.GetKeyDown(KeyCode.E) && ScoreScript.scoreValue >= 10 && _health.Hp < 100)
             {
                 _health.Heal(100);
                 ScoreScript.scoreValue -= 10;

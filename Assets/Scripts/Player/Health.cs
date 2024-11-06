@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -34,7 +35,12 @@ public class Health : MonoBehaviour
                     deadStatus = true;
                     ScoreScript.scoreValue += 10;
                 }
+                else if(enemyStatus == false)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
                 Died?.Invoke(0);
+
             }
         }
     }
