@@ -71,8 +71,10 @@ public class InputHandler : MonoBehaviour
 
     //Handle dash on dash input pressed
     private void OnDash(InputAction.CallbackContext context){
-        _playerMovement.HandleDash();
-        _playerCamera.HandleFOV(100f);
+        if(_playerMovement.CanDash()){
+            _playerMovement.HandleDash();
+            _playerCamera.HandleFOV(100f);
+        }
     }
 
     private void OnEscape(InputAction.CallbackContext context){
