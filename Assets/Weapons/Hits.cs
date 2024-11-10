@@ -10,6 +10,11 @@ public class Hits : MonoBehaviour
     private Transform PlayerCamera;
     public Transform GunLocation;
     AudioSource ShootingSound;
+
+    [SerializeField] private GameObject _projectile;
+    [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private Transform directionPoint;
+
     void Start()
     {
         PlayerCamera = Camera.main.transform;
@@ -20,12 +25,15 @@ public class Hits : MonoBehaviour
     // Update is called once per frame
     public void shoot()
     {
+        GameObject _firedProjectile = Instantiate(_projectile);
+        _firedProjectile.transform.position = _spawnPoint.position;
+        _firedProjectile.transform.LookAt(directionPoint.position);
         Ray gunRay = new Ray(GunLocation.position,GunLocation.forward);
         ShootingSound.Play();
-        if(Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange)){
-            if(hitInfo.collider.gameObject.TryGetComponent(out Health enemy)){
-                enemy.Damage((int) Damage);
-            }
-        }
+        //if(Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange)){
+            //if(hitInfo.collider.gameObject.TryGetComponent(out Health enemy)){
+                //enemy.Damage((int) Damage);
+            //}
+        //}
     }
 }
