@@ -14170,6 +14170,14 @@ PrefabInstance:
       propertyPath: Damaged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7983445891402794570, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983445891402794570, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.266
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6078559497137156608, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}

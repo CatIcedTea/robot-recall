@@ -36,7 +36,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6838487081187193295}
   - {fileID: 4461254307237693667}
   - {fileID: 3406199515447038093}
   - {fileID: 4516623887064338002}
@@ -384,12 +383,12 @@ Transform:
   m_GameObject: {fileID: 2334101525288308513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.311, y: 0.433, z: 0.712}
-  m_LocalScale: {x: 0.15, y: 0.13, z: 0.39}
+  m_LocalPosition: {x: -0.13666669, y: 0.09733333, z: 0.06999998}
+  m_LocalScale: {x: 0.050000004, y: 0.043333333, z: 0.13}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1543048424501252635}
-  m_Father: {fileID: 5049066395088397964}
+  m_Father: {fileID: 4516623887064338002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4035860765767919901
 MeshFilter:
@@ -603,6 +602,7 @@ MonoBehaviour:
   Damage: 1
   BulletRange: 5000
   GunLocation: {fileID: 4516623887064338002}
+  wholeGun: {fileID: 3883674984433046760}
   _projectile: {fileID: 4194316899812063632, guid: c2d8f6f3d90a1084e9f00d8d69cd8728, type: 3}
   _spawnPoint: {fileID: 7983445891402794570}
   directionPoint: {fileID: 4359991855164252634}
@@ -851,8 +851,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 28ebbcd7f4773384e867c255af2c669b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7983445891402794570}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 28ebbcd7f4773384e867c255af2c669b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6838487081187193295}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ebbcd7f4773384e867c255af2c669b, type: 3}
+--- !u!1 &3883674984433046760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 28ebbcd7f4773384e867c255af2c669b, type: 3}
+  m_PrefabInstance: {fileID: 4117693052263262649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4516623887064338002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 28ebbcd7f4773384e867c255af2c669b, type: 3}
