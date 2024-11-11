@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -667848602230224664, guid: c2d8f6f3d90a1084e9f00d8d69cd8728, type: 3}
+      propertyPath: _projectileSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1927344273579937509, guid: c2d8f6f3d90a1084e9f00d8d69cd8728, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

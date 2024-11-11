@@ -8,7 +8,7 @@ public class Hits : MonoBehaviour
     public float Damage;
 
     public float BulletRange;
-    private float hitDist = 300.0f;
+    /*private float hitDist = 300.0f; commented out because never used*/
     private Transform PlayerCamera;
     public Transform GunLocation;
     AudioSource ShootingSound;

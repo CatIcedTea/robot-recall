@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     //Current stamina
     private float _stamina;
     //Used to check if the player can regen stamina
-    private bool _canRegenStamina = true;
+    /*private bool _canRegenStamina = true;           commented out because never used?*/
     //Vector of the player's input
     private Vector3 _inputDir;
     //Rigid body component of the player
