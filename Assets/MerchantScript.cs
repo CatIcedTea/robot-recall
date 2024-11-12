@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class MerchantScript : MonoBehaviour
 {
-    public Health _health;
-    public GameObject player;
-    public int scoreVal;
+    private Health _health;
+    private GameObject player;
+    private int scoreVal;
     public CapsuleCollider storeFront;
     public GameObject storeIntro;
     private bool inStore = false;
     private bool shopping = false;
     public GameObject storeMenu;
-    public GameObject standardMenu;
-    public GameObject speedIndicator;
-    public GameObject gun;
-    public GameObject gunAssociate;
+    //public GameObject standardMenu;
+    //public GameObject speedIndicator;
+    //public GameObject gun;
+    //public GameObject gunAssociate;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -28,19 +28,19 @@ public class MerchantScript : MonoBehaviour
     {
         storeIntro.SetActive(false);
         storeMenu.SetActive(true);
-        standardMenu.SetActive(false);
-        speedIndicator.SetActive(false);
-        gun.SetActive(false);
-        gunAssociate.SetActive(false);
+        //standardMenu.SetActive(false);
+        //speedIndicator.SetActive(false);
+        //gun.SetActive(false);
+        //gunAssociate.SetActive(false);
     }
     private void closeShop()
     {
 
-        standardMenu.SetActive(true);
+        //standardMenu.SetActive(true);
         storeMenu.SetActive(false);
-        speedIndicator.SetActive(true);
-        gun.SetActive(true);
-        gunAssociate?.SetActive(true);
+        //speedIndicator.SetActive(true);
+        //gun.SetActive(true);
+        //gunAssociate?.SetActive(true);
     }
     private void OnTriggerEnter(Collider other)
     {
