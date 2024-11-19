@@ -307,6 +307,7 @@ MonoBehaviour:
   - {fileID: 7420436577349019976}
   - {fileID: 1163386280412629038}
   - {fileID: 7478158159766204729}
+  betaStatus: 
 --- !u!1001 &50034072924797527
 PrefabInstance:
   m_ObjectHideFlags: 0
