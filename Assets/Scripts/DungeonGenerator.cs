@@ -21,6 +21,7 @@ public class DungeonGenerator : MonoBehaviour
 
     void Start()
     {
+        AdjustNavMeshBounds();
         MazeGenerator();
         BakeNavMesh();
     }
@@ -40,10 +41,14 @@ public class DungeonGenerator : MonoBehaviour
                 Cell currentCell = board[Mathf.FloorToInt(i + j * size.x)];
                 if (currentCell.visited)
                 {
-                    var randomRoomPrefab = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
+                    int random = Random.Range(0, roomPrefabs.Length);
+                    var randomRoomPrefab = roomPrefabs[random];
                     var newRoom = Instantiate(randomRoomPrefab, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehavior>();
                     newRoom.UpdateRoom(currentCell.status);
                     newRoom.name += " " + i + " " + j;
+                    if(random == 4){
+                        roomPrefabs[4] = roomPrefabs[1];
+                    }
                 }
             }
         }
@@ -53,6 +58,25 @@ public class DungeonGenerator : MonoBehaviour
         if (navMeshSurface != null)
         {
             navMeshSurface.BuildNavMesh();
+        }
+    }
+    void AdjustNavMeshBounds()
+    {
+        if (navMeshSurface != null)
+        {
+            // Calculate bounds based on dungeon size and offset
+            Vector3 dungeonSize = new Vector3(size.x * offset.x, 10f, size.y * offset.y); // Ensure height is sufficient
+            navMeshSurface.size = dungeonSize;
+            navMeshSurface.center = new Vector3((size.x * offset.x) / 2, 0, -(size.y * offset.y) / 2);
+
+            Debug.Log($"NavMesh bounds adjusted to size: {navMeshSurface.size}, center: {navMeshSurface.center}");
+
+            // Rebake the NavMesh
+            navMeshSurface.BuildNavMesh();
+        }
+        else
+        {
+            Debug.LogError("NavMeshSurface not assigned!");
         }
     }
     void MazeGenerator()
