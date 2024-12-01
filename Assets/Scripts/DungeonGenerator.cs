@@ -41,7 +41,7 @@ public class DungeonGenerator : MonoBehaviour
                 if (currentCell.visited)
                 {
                     int random = Random.Range(0, roomPrefabs.Length);
-                    while(i < 2 && random == 4){
+                    while(i < 3 && random == 4){
                         random = Random.Range(0, roomPrefabs.Length);
                     }
                     var randomRoomPrefab = roomPrefabs[random];
