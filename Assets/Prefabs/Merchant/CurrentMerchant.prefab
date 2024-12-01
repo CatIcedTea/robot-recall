@@ -171,10 +171,10 @@ MonoBehaviour:
   m_text: 'Trade Scrap for Repairs!
 
 
-    Press [E] To Heal for [10] Scrap!'
+    Press [E] To Heal for [30] Scrap!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
-  m_sharedMaterial: {fileID: 6728855780374161068, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
+  m_sharedMaterial: {fileID: -1539574670341029402, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
