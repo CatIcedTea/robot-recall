@@ -41,6 +41,9 @@ public class DungeonGenerator : MonoBehaviour
                 if (currentCell.visited)
                 {
                     int random = Random.Range(0, roomPrefabs.Length);
+                    while(i < 2 && random == 4){
+                        random = Random.Range(0, roomPrefabs.Length);
+                    }
                     var randomRoomPrefab = roomPrefabs[random];
                     var newRoom = Instantiate(randomRoomPrefab, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehavior>();
                     newRoom.UpdateRoom(currentCell.status);

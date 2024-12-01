@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f5e4ca4cd1aa748bc331720a59a295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 2, y: 2}
+  size: {x: 8, y: 8}
   startPos: 0
   offset: {x: 45.5, y: 45.5}
   navMeshSurface: {fileID: 1238761955}
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_text: 'SCORE: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
-  m_sharedMaterial: {fileID: 6728855780374161068, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
+  m_sharedMaterial: {fileID: -1539574670341029402, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_text: 'HP: Current / Max'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
-  m_sharedMaterial: {fileID: 6728855780374161068, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
+  m_sharedMaterial: {fileID: -1539574670341029402, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2075,7 +2075,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
-  m_sharedMaterial: {fileID: 6728855780374161068, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
+  m_sharedMaterial: {fileID: -1539574670341029402, guid: 5b99b7d3064022c40a5abc5e31646546, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2747,6 +2747,10 @@ PrefabInstance:
       propertyPath: _cameraHolder
       value: 
       objectReference: {fileID: 675772059}
+    - target: {fileID: 3185075487597427930, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4188962018975519398, guid: 84c72db068be6e44fb88941f83dbc86e, type: 3}
       propertyPath: FireRate
       value: 0.175

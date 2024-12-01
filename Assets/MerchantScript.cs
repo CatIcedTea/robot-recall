@@ -87,14 +87,10 @@ public class MerchantScript : MonoBehaviour
         }
         if (shopping == true)
         {
-            if (Input.GetKeyDown(KeyCode.R) && ScoreScript.scoreValue >= 10)
-            {
-                ScoreScript.scoreValue -= 10;
-            }
-            if (Input.GetKeyDown(KeyCode.E) && ScoreScript.scoreValue >= 10 && _health.Hp < 100)
+            if (Input.GetKeyDown(KeyCode.E) && ScoreScript.scoreValue >= 30 && _health.Hp < 100)
             {
                 _health.Heal(100);
-                ScoreScript.scoreValue -= 10;
+                ScoreScript.scoreValue -= 30;
             }
         }
         //If the player overlaps the Shop Collision then give options to buy
