@@ -12,7 +12,6 @@ public class DungeonGenerator : MonoBehaviour
     }
     public Vector2 size;
     public int startPos = 0;
-    public GameObject room;
     public Vector2 offset;
     List<Cell> board;
     public NavMeshSurface navMeshSurface;

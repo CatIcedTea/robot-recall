@@ -192,6 +192,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleMultiplier: -1
   smoothing: 100000
+--- !u!1 &156872816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 156872818}
+  - component: {fileID: 156872817}
+  m_Layer: 0
+  m_Name: Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &156872817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156872816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f5e4ca4cd1aa748bc331720a59a295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 2, y: 2}
+  startPos: 0
+  offset: {x: 45.5, y: 45.5}
+  navMeshSurface: {fileID: 1238761955}
+  roomPrefabs:
+  - {fileID: 3493198116557838878, guid: 83967dde4dd091248bb2fbf493bad9ea, type: 3}
+  - {fileID: 3493198116557838878, guid: 2cca09d12b4ce4a40a32123ff710747b, type: 3}
+  - {fileID: 3493198116557838878, guid: 1f65480f418632944a83f45f44c88729, type: 3}
+  - {fileID: 3493198116557838878, guid: beca086aa68695845896d4a8b848c616, type: 3}
+  - {fileID: 3493198116557838878, guid: 84abcb19842abff4580b328eebfeef10, type: 3}
+--- !u!4 &156872818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156872816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 181, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158067660
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,61 +798,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438659714}
   m_CullTransparentMesh: 1
---- !u!1 &512838348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 512838350}
-  - component: {fileID: 512838349}
-  m_Layer: 0
-  m_Name: Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &512838349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512838348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f5e4ca4cd1aa748bc331720a59a295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 8, y: 8}
-  startPos: 0
-  room: {fileID: 0}
-  offset: {x: 45.5, y: 45.5}
-  navMeshSurface: {fileID: 1238761955}
-  roomPrefabs:
-  - {fileID: 3493198116557838878, guid: beca086aa68695845896d4a8b848c616, type: 3}
-  - {fileID: 3493198116557838878, guid: 83967dde4dd091248bb2fbf493bad9ea, type: 3}
-  - {fileID: 3493198116557838878, guid: 2cca09d12b4ce4a40a32123ff710747b, type: 3}
-  - {fileID: 3493198116557838878, guid: 1f65480f418632944a83f45f44c88729, type: 3}
-  - {fileID: 3493198116557838878, guid: 84abcb19842abff4580b328eebfeef10, type: 3}
---- !u!4 &512838350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512838348}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 181, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611964980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,6 +2940,6 @@ SceneRoots:
   - {fileID: 1238761956}
   - {fileID: 1424664596}
   - {fileID: 1870744}
-  - {fileID: 512838350}
+  - {fileID: 156872818}
   - {fileID: 3236427856911865699}
   - {fileID: 8042660000129647696}
