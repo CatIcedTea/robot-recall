@@ -43,10 +43,11 @@ public class PlayerCamera : MonoBehaviour
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
         //Apply the rotation to the camera
-        _cameraHolder.transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0);
+        _cameraHolder.transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
 
         //Apply the rotation to the player
-        _playerBasis.parent.transform.localRotation = Quaternion.Euler(0, _yRotation, 0);
+        _playerBasis.transform.rotation = Quaternion.Euler(_playerBasis.transform.rotation.x, _yRotation, 0);
+        _playerBasis.parent.transform.rotation = Quaternion.Euler(0, _yRotation, 0);
 
         //Moves the camera to the player camera position
         _cameraHolder.transform.position = _playerBasis.transform.position;
