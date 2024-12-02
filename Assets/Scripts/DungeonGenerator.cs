@@ -33,6 +33,7 @@ public class DungeonGenerator : MonoBehaviour
 
     void GenerateDungeon()
     {
+        int check = 0;
         for (int i = 0; i < size.x; i++)
         {
             for (int j = 0; j < size.y; j++)
@@ -44,12 +45,18 @@ public class DungeonGenerator : MonoBehaviour
                     while(i < 3 && random == 4){
                         random = Random.Range(0, roomPrefabs.Length);
                     }
+                    if(i == 6 || j == 6 && check != 0){
+                        random = 4;
+                    }
+                    while(check > 0 && random == 4){
+                        random = Random.Range(0, roomPrefabs.Length);
+                    }
                     var randomRoomPrefab = roomPrefabs[random];
                     var newRoom = Instantiate(randomRoomPrefab, new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehavior>();
                     newRoom.UpdateRoom(currentCell.status);
                     newRoom.name += " " + i + " " + j;
                     if(random == 4){
-                        roomPrefabs[4] = roomPrefabs[1];
+                        check++;
                     }
                 }
             }
