@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -172,8 +172,6 @@ MonoBehaviour:
   storeFront: {fileID: 268088234114542327}
   storeIntro: {fileID: 0}
   storeMenu: {fileID: 0}
-  standardMenu: {fileID: 0}
-  speedIndicator: {fileID: 0}
 --- !u!1 &8121345771676726447
 GameObject:
   m_ObjectHideFlags: 0

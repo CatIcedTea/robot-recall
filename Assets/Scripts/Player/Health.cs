@@ -37,6 +37,7 @@ public class Health : MonoBehaviour
                 }
                 else if(enemyStatus == false)
                 {
+                    ScoreScript.scoreValue = 0;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
                 Died?.Invoke(0);

@@ -22,6 +22,7 @@ public class Hole : MonoBehaviour
             GameEndMenuActive=true;
             if (Input.GetKeyDown(KeyCode.R))
             {
+                ScoreScript.scoreValue = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             else if (Input.GetKeyDown(KeyCode.Q))
